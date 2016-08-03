@@ -7,15 +7,15 @@
 //for the attiny 841
 
 #include <QueueArray.h> //http://playground.arduino.cc/Code/QueueArray
-#include <StepperF.h>   
+#include <StepperF_alt.h>   
 #include <WireS.h>    //https://github.com/orangkucing/WireS             
 
 // led is an indicator led attached to physical pin 2 of the attiny 841 SOIC
 //define your own slave address for each motor axis with I2C_SLAVE_ADDR
 //the motor has 2048 full steps per revolution; i.e. 4096 half steps
-#define led                0
-#define act                1
-#define I2C_SLAVE_ADDR     24
+#define led                1
+#define act                0
+#define I2C_SLAVE_ADDR     48
 #define STEPS           4096 
 
 // create a queue of ints to act as the command buffer 
@@ -41,7 +41,7 @@ void setup()
   Blink(led);
   Wire.begin(I2C_SLAVE_ADDR);     
   Wire.onReceive(transfer);
-  stepper.setSpeed(10);
+  stepper.setSpeed(1);
 }
 
 
