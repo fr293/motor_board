@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP ATMEGA16U4-M-pad-connected
+D QFN44, 16K Flash, 1.25K SRAM, 512B EEPROM, USB2.0
+K AVR 8bit Microcontroller MegaAVR USB
+F http://www.atmel.com/images/atmel-7766-8-bit-avr-atmega16u4-32u4_%20datasheet.pdf
+$ENDCMP
+#
+#End Doc Library
